@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DDayAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wn-TK-pKD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRU-H6-TiM">
+                                <rect key="frame" x="20" y="40" width="164.5" height="20.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jOh-iD-M8b">
+                                    <rect key="frame" x="0.0" y="0.0" width="164.5" height="20.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing AR session" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pa-ZQ-NWe">
+                                            <rect key="frame" x="0.0" y="0.0" width="164.5" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="XW9-ZH-eKM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="0Pa-ZQ-NWe" secondAttribute="bottom" id="AxG-bJ-VGZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Pa-ZQ-NWe" secondAttribute="trailing" id="b6x-qj-o8f"/>
+                                        <constraint firstItem="0Pa-ZQ-NWe" firstAttribute="leading" secondItem="jOh-iD-M8b" secondAttribute="leading" id="exk-d0-iow"/>
+                                        <constraint firstItem="0Pa-ZQ-NWe" firstAttribute="top" secondItem="jOh-iD-M8b" secondAttribute="top" id="tJg-dt-Ge1"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvF-NZ-fXc">
+                                <rect key="frame" x="316" y="40" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTracking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ixD-jK-dD1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXa-J2-pbA">
+                                <rect key="frame" x="166.5" y="564" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qag-gv-Fxk">
+                                <rect key="frame" x="130.5" y="597" width="114" height="30"/>
+                                <state key="normal" title="Send World Map"/>
+                                <connections>
+                                    <action selector="shareSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FdI-Mn-deY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KRU-H6-TiM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2e3-l5-jt5"/>
+                            <constraint firstItem="Qag-gv-Fxk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2e8-oE-NN6"/>
+                            <constraint firstItem="KRU-H6-TiM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="63E-jR-vu6"/>
+                            <constraint firstItem="hvF-NZ-fXc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="MqB-a9-qfK"/>
+                            <constraint firstItem="0Wn-TK-pKD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QUu-PI-BHG"/>
+                            <constraint firstItem="Qag-gv-Fxk" firstAttribute="top" secondItem="tXa-J2-pbA" secondAttribute="bottom" constant="12" id="TZe-zj-MKn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Wn-TK-pKD" secondAttribute="trailing" id="Zav-ys-Apf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qag-gv-Fxk" secondAttribute="bottom" constant="40" id="d6h-bZ-3kV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Wn-TK-pKD" secondAttribute="bottom" id="emQ-z8-Jpj"/>
+                            <constraint firstItem="0Wn-TK-pKD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j7G-Kb-Uly"/>
+                            <constraint firstItem="tXa-J2-pbA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sN9-Zd-QAZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hvF-NZ-fXc" secondAttribute="trailing" constant="20" id="w2f-4O-aTq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mappingStatusLabel" destination="tXa-J2-pbA" id="xOb-WR-MdT"/>
+                        <outlet property="sceneView" destination="0Wn-TK-pKD" id="ImQ-ny-WGS"/>
+                        <outlet property="sendMapButton" destination="Qag-gv-Fxk" id="wUY-sA-6Zl"/>
+                        <outlet property="sessionInfoLabel" destination="0Pa-ZQ-NWe" id="08F-Ik-VYY"/>
+                        <outlet property="sessionInfoView" destination="KRU-H6-TiM" id="s0W-bh-osb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="140"/>
+        </scene>
+    </scenes>
+</document>
